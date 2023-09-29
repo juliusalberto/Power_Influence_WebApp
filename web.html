@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Power Influence Matrix</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="matrix-container">
+        <svg id="matrix" width="600" height="600" onclick="addDot(event)">
+            <!-- Vertical grid line (central) -->
+            <line x1="300" y1="0" x2="300" y2="600" stroke="black"/>
+            <!-- Horizontal grid line (central) -->
+            <line x1="0" y1="300" x2="600" y2="300" stroke="black"/>
+            
+            <!-- Labels -->
+            <text x="310" y="30" font-family="Arial" font-size="14">High Influence</text>
+            <text x="310" y="580" font-family="Arial" font-size="14">Low Influence</text>
+            <text x="20" y="290" font-family="Arial" font-size="14">Low Power</text>
+            <text x="480" y="290" font-family="Arial" font-size="14">High Power</text>
+        </svg>     
+
+        <table id="dotTable">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Color</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Rows corresponding to each dot will be added here dynamically -->
+            </tbody>
+        </table>
+        
+    </div>
+
+    <button onclick="exportToPng()">Export to PNG</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
